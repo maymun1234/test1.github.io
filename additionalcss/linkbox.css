@@ -1,0 +1,16 @@
+.linkbox{
+    width: 40%;
+    margin-top: 20px;
+    background-color: var(--tema);
+    height: 50px;
+    padding: 5px;
+    color: var(--siyah);
+    font-size: 20px;
+
+    @media (max-width: 920px) {
+        width: 100%;
+        }
+    
+
+
+}
