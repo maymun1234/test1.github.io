@@ -15,7 +15,7 @@ body{
 .pagetitle {
     margin-top: 80px;
     background-color: var(--siyah);
-    background-image: url('aboutus/aboutustitlbg.jpg'); /* Arkaplan resmi dosya yolu */
+    background-image: url('aboutustitlbg.jpg'); /* Arkaplan resmi dosya yolu */
     background-size: cover; /* Resmi div'e sığdır */
     background-repeat: no-repeat; /* Resmi tekrar etme */ 
     min-height: 200px;
