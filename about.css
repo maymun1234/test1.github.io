@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto+Mono&family=Roboto:wght@500&display=swap');
+
+
+
+
+
+body{
+    color: var(--siyah);
+}
+
+
+
+
+
+::selection {
+    background-color: var(--tema); /* Seçim arka plan rengi */
+    color: var(--siyah); /* Seçim metin rengi */
+}
+
+
+.pagebody{
+padding: 20px;
+padding-left: 10%;
+padding-right: 10%;
+@media (max-width: 920px) {
+    padding-left: 5%;
+padding-right: 5%;
+    }
+
+}
+
+
+.pagebody p{
+    color: var(--beyaz);
+    font-family: 'Merriweather', serif;
+    font-size: 18px;
+    text-align: left;
+    line-height: 1.6;
+
+
+}
+
+
+.infobox{
+    
+    width: 100%;
+    
+    padding: 10px;
+    padding-left: 0;
+
+
+
+
+}
+
+.infobox div{
+    background-color: var(--tema);
+    font-size: 30px;
+    font-family: roboto;
+    width: 400px;
+    color: var(--siyah);
+    padding: 10px;
+
+    @media (max-width: 920px) {
+        width: 100%;
+        }
+
+
+
+
+
+}
+
+
+.footer{
+    width: 100%;
+    
+    background-color: var(--tema);
+    color: var(--siyah);
+    padding: 10px;
+    text-align: center;
+
+
+
+}
+
+::selection {
+    background-color: var(--tema); /* Seçim arka plan rengi */
+    color: var(--siyah); /* Seçim metin rengi */
+}
+
+
+.articlepic{
+    width: 50%;
+    margin:30px 0px 30px 0px;
+    @media (max-width: 920px) {
+        width: 100%;
+        }
+
+
+
+
+}

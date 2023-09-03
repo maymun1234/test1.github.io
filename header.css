@@ -1,0 +1,358 @@
+/* header.css */
+
+
+:root {
+    --beyaz: #ffffff;
+    --tema: #ff7357;
+    --siyah: #261f1f;
+  }
+
+
+
+
+/* Genel stiller */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+  }
+  
+  html, body {
+    height: 100%; /* Ekran boyutu kadar yükseklik */
+    background-color: var(--siyah);
+    color: var(--beyaz);
+  }
+  
+  /* Navbar stilleri */
+  nav {
+    position: fixed; /* Header'ı sabitler */
+    top: 0; /* Sayfanın en üstüne yerleştirir */
+    left: 0; /* Sayfanın soluna yerleştirir */
+    display: flex;
+    height: 80px;
+    width: 100%;
+    background: var(--siyah);
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px 0 100px;
+    flex-wrap: wrap;
+    border-bottom: 2px solid var(--tema); /* 1 piksellik siyah çizgi */
+    z-index: 9999;
+}
+  
+  nav .logo {
+    color: var(--siyah);
+    font-size: 40px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+
+  h1{
+    font-size: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--siyah);
+
+    @media (max-width: 920px) {
+        color: var(--siyah);
+        text-align: center;
+        }
+
+
+
+
+  }
+  
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+  }
+  
+  nav ul li {
+    margin: 0 5px;
+  }
+  
+  nav ul li a {
+    color: var(--beyaz);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+  }
+  
+  nav ul li a.active,
+  nav ul li a:hover {
+    color: var(--siyah);
+    background:  var(--tema);
+  }
+  
+  nav .menu-btn i {
+    color: var(--tema);
+    font-size: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  
+  input[type="checkbox"] {
+    display: none;
+  }
+  
+  @media (max-width: 1000px) {
+    nav {
+      padding: 0 40px 0 50px;
+    }
+  }
+  
+  @media (max-width: 920px) {
+    nav .menu-btn i {
+      display: block;
+    }
+  
+    #click:checked ~ .menu-btn i:before {
+      content: "\f00d";
+    }
+  
+    nav ul {
+      position: fixed;
+      top: 80px;
+      left: -100%;
+      background: var(--siyah);
+      height: 100vh;
+      width: 100%;
+      text-align: center;
+      display: block;
+      transition: all 0.3s ease;
+    }
+  
+    #click:checked ~ ul {
+      left: 0;
+    }
+  
+    nav ul li {
+      width: 100%;
+      margin: 40px 0;
+    }
+  
+    nav ul li a {
+      width: 100%;
+      margin-left: -100%;
+      display: block;
+      font-size: 20px;
+      transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+  
+    #click:checked ~ ul li a {
+      margin-left: 0px;
+    }
+  
+    nav ul li a.active,
+    nav ul li a:hover {
+      background: none;
+      color: var(--tema);
+    }
+  }
+  
+  /* Sectionlar için stil */
+  .content {
+    /* position: absolute; */ /* Bu satırı kaldırın */
+    /* top: 80px; */ /* Navbar'ın yüksekliği kadar aşağıdan başlat */ /* Bu satırı kaldırın */
+    /* left: 0; */ /* Bu satırı kaldırın */
+    width: 100%;
+    height: 100vh; /* Sectionlar tam ekran yüksekliği */
+    text-align: center;
+    color: var(--siyah);
+    padding-top: 80px; /* Navbar'ın yüksekliği kadar boşluk bırakın */
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
+  
+  .content div {
+    font-size: 20px;
+    font-weight: 700;
+    overflow: hidden;
+  }
+
+  #section-selam {
+    background: linear-gradient(0deg, var(--tema) 50%, var(--beyaz) 50%);
+    color: var(--siyah);
+    align-items: center;
+    overflow: hidden;
+
+    @media (max-width: 920px) {
+        #section-selam {
+            display: flex; /* Divleri yatayda hizalama için flex kullan */
+            flex-direction: column; /* Dikey düzende sıralama */
+            justify-content: center; /* Dikeyde ortalamak için */
+            align-items: center; /* Yatayda ortalamak için */
+            margin-bottom: 0px;
+        }
+    
+}
+  }
+
+.profile-picture {
+    width: calc(80vh * 9 / 14); /* Genişlik 9/16 oranında hesaplanır */
+  height: 80vh; /* Yükseklik %80 viewport yüksekliği */
+  background-color: #9c3434;
+  
+  overflow: hidden;
+  margin: 0 auto; /* Yatayda ortala */
+  position: absolute;
+    left: 10%;
+
+  @media (max-width: 920px) {
+    position: relative;
+    left: 0px;
+    height: 50vh;
+  }
+  }
+
+  
+
+.profile-picture img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Resim boyutunu koru, taşı ve kırp */
+}
+
+#selam-text {
+    height: auto; /* Yükseklik %30 viewport yüksekliği */
+  width: 500px; /* Genişlik %20 viewport genişliği */
+  max-width: 500px;
+  position: absolute;
+  right: 10%; /* Sağdan 20% uzaklıkta */
+   /* Örnek olarak gri bir arkaplan rengi */
+  top: 50%; /* Dikeyde containerın yukarıdan %50'sinde başlaması */
+  transform: translateY(-50%); /* Dikeyde içeriği ortalamak için */
+  text-align: left;
+  overflow: hidden;
+  
+    
+
+    @media (max-width: 920px) {
+        
+        top: auto; /* top özelliğini kaldırın */
+        bottom: 20px; /* En alta yapışık olması için bottom özelliğini 0 yap */
+        left: 50%; /* Yatayda ortalamak için sol kenardan %50 uzaklıkta */
+        transform: translateX(-50%); /* Yatayda ortalamak için transform kullan */
+        width: 90%;
+        max-width: 90%;
+        
+
+
+        h1{
+            color: var(--beyaz);
+
+
+
+        }
+        
+        
+      }
+  }
+
+
+  .scrolltext{
+    color: var(--beyaz);
+    background-color: var(--siyah);
+    padding: 5px;
+    margin-top: 5px;
+    
+
+    
+      
+    
+    height: auto;
+    @media (max-width: 920px) {
+        text-align: center;
+
+    
+    }
+
+
+  }
+
+
+  .content {
+    /* ... */
+    height: 99vh; /* Sectionlar %80 viewport yüksekliğinde olacak */
+    /* ... */
+}
+
+
+.content-title{
+    
+    color: #9c3434;
+    
+    padding: 2%;
+    font-size: 3em;
+    background-color: var(--tema);
+    height: 20%;
+
+
+
+    p{
+        font-size: 30px;
+        
+
+
+    }
+
+    h1{
+
+        font-size: 100cap;
+    }
+
+
+
+
+
+}
+
+@keyframes slideUp {
+    0% {
+      transform: translate(-50%, -100%);
+    }
+    100% {
+      transform: translate(-50%, 0);
+    }
+  }
+
+  #typewriter {
+    overflow: hidden; /* Metni gizlemek için */
+    border-right: .10em solid var(--beyaz); /* Yazılan metni göstermek için bir kenarlık oluşturun */
+    white-space: nowrap; /* Satır sonu kapatma */
+    margin: 0 auto; /* Metni merkezlemek için */
+    letter-spacing: 0em; /* Harf aralığı eklemek */
+    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite; /* Animasyonları tanımlamak */
+    animation-fill-mode: forwards; /* Animasyon sonu durumunu koru */
+   
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: var(--beyaz);
+    }
+  }

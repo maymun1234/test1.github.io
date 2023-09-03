@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto+Mono&family=Roboto:wght@500&display=swap');
+
+
+
+
+
+body{
+    color: var(--beyaz);
+
+
+
+}
+
+
+.pagetitle {
+    margin-top: 80px;
+    background-color: var(--siyah);
+    background-image: url('aboutus/aboutustitlbg.jpg'); /* Arkaplan resmi dosya yolu */
+    background-size: cover; /* Resmi div'e sığdır */
+    background-repeat: no-repeat; /* Resmi tekrar etme */ 
+    min-height: 200px;
+
+    
+
+}
+
+.pagetitle h1{
+    text-align: center;
+    color: var(--tema);
+    line-height: 200px; 
+
+    @media (max-width: 920px) {
+        line-height: 150px;
+        }
+
+
+
+}
+
+
+
+
+
+
